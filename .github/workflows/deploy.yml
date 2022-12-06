@@ -24,7 +24,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 19
+          node-version: 16
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -47,7 +47,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 19
+          node-version: 16
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -70,7 +70,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 19
+          node-version: 16
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
@@ -83,6 +83,10 @@ jobs:
   cypress:
     name: ⚫️ Cypress
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        machines: ['Kody', 'Hannah', 'Olivia']
     steps:
       - name: 🛑 Cancel Previous Runs
         uses: styfle/cancel-workflow-action@0.11.0
@@ -96,7 +100,7 @@ jobs:
       - name: ⎔ Setup node
         uses: actions/setup-node@v3
         with:
-          node-version: 19
+          node-version: 16
 
       - name: 📥 Download deps
         uses: bahmutov/npm-install@v1
