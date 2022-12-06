@@ -2,7 +2,6 @@ import { defineConfig } from 'cypress'
 
 export default defineConfig({
 
-	projectId: '4g6oks',
 	env: {
 		// This is the project ID from the Cypress Dashboard
 		// https://dashboard.cypress.io/projects/4g6oks/settings
