@@ -2,12 +2,13 @@ import { defineConfig } from 'cypress'
 
 export default defineConfig({
 
+	projectId: '4g6oks',
 	env: {
 		// This is the project ID from the Cypress Dashboard
 		// https://dashboard.cypress.io/projects/4g6oks/settings
 		// It is used to record test results
+		CYPRESS_PROJECT_ID: '4g6oks',
 		CYPRESS_RECORD_KEY: '9b672414-e3bc-410a-9af6-6e1a2853f5a5',
-		projectId: '4g6oks',
 	},
 	e2e: {
 		setupNodeEvents: (on, config) => {

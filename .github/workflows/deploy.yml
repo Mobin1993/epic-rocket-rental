@@ -122,6 +122,7 @@ jobs:
           PORT: '8811'
           # pass the Dashboard record key as an environment variable
           CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
+          CYPRESS_PROJECT_ID: ${{secrets.CYPRESS_PROJECT_ID}}
 
   build:
     name: 🐳 Build
